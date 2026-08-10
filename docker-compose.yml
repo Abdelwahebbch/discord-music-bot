@@ -32,6 +32,9 @@ services:
       LAVALINK_HOST: lavalink
       LAVALINK_PORT: 2333
       LAVALINK_PASSWORD: ${LAVALINK_PASSWORD}
+    volumes:
+      - ./background.png:/app/background.png
+      - ./font.ttf:/app/font.ttf
 
     depends_on:
       - lavalink

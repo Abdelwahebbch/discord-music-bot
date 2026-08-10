@@ -24,7 +24,7 @@ class MusicBot(commands.Bot):
 
     def __init__(self):
         intents = discord.Intents.default()
-
+        intents.members = True
         super().__init__(
             command_prefix="!",
             intents=intents,
@@ -43,7 +43,7 @@ class MusicBot(commands.Bot):
         )
 
         await self.load_extension("bot.cogs.music")
-
+        await self.load_extension("bot.cogs.welcome")
         await self.tree.sync()
 
         logging.info("Slash commands synchronized.")
