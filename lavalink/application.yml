@@ -13,6 +13,8 @@ plugins:
       - ANDROID_VR
       - WEB
       - WEBEMBEDDED
+  oauth :
+    enabled : true
 
 lavalink:
   plugins:
